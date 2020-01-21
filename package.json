@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/JosephArbelaez/ticketing#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.2"
   }
 }
