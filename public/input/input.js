@@ -1,18 +1,25 @@
-function submitLocation() {
-    if ('geolocation' in navigator) {
+// Geo Locate
+let lat, lon;
+if ('geolocation' in navigator) {
         console.log('geolocation available');
         navigator.geolocation.getCurrentPosition(async position => {
-            // Variables to hold form information.
-            const lat = position.coords.latitude;
-            const lon = position.coords.longitude;
-            const superhero = document.getElementById('superhero').value;
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            document.getElementById('latitude').textContent = lat.toFixed(2);
+            document.getElementById('longitude').textContent = lon.toFixed(2);
+            const api_url = `/weather/${lat},${lon}`;
+            const response = await fetch(api_url);
+            const json = await response.json();
+            console.log(json);
+        });
+    }   else {
+            console.log('geolocation not available');
+    }
 
-            // Display to DOM.
-            document.getElementById('latitude').textContent = lat;
-            document.getElementById('longitude').textContent = lon;
-            
-            // API
-            const data = {lat, lon, superhero};
+    // API call check-in button
+    const button = document.getElementById('checkin');
+        button.addEventListener('click', async event => {
+            const data = {lat, lon};
             const options = {
                 method: 'POST',
                 headers: {
@@ -24,7 +31,3 @@ function submitLocation() {
             const json = await response.json();
             console.log(json);
         });
-    } else {
-        console.log('geolocation not available');
-    }
-}
