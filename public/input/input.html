@@ -8,14 +8,14 @@
         
     </head>
     <body>
+        <h1>The Weather Here</h1>
         <a href="../log/log.html">Log  |  </a>
         <a href="input.html">Input</a>
-        <h1>Input</h1>
-        <p>latitude: <span id="latitude"></span>&deg;</p>
-        <br>
-        <p>longitude: <span id="longitude"></span>&deg;</p>
-        <br>
-        <button id="checkin">Check-in</button>
+        <p>latitude: <span id="latitude"></span>&deg;, longitude: <span id="longitude"></span>&deg;</p>
+        <p>The weather here is <span id="summary"></span> with a temperature of <span id="temperature"></span> &deg;F.
+        The concentration of particulate matter (<span id="aq_parameter"></span>) is <span id="aq_value"></span>
+        <span id="aq_units"></span> last read on <span id="aq_date"></span>.
+        </p>
         <script src="input.js"></script>
     </body>
 </html>

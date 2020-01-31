@@ -1,11 +1,1 @@
-{"lat":36.3519279,"lon":-94.20259589999999,"superhero":"Droopy Dog","timestamp":1579606619843,"_id":"3H3fpXLsVkaQitNw"}
-{"lat":36.3519279,"lon":-94.20259589999999,"superhero":"Droopy Dog","timestamp":1579607280311,"_id":"b03YT23xeIlW3h9b"}
-{"lat":36.3519279,"lon":-94.20259589999999,"superhero":"Slappy Sam","timestamp":1579610849013,"_id":"fF7E5zbhEL1ddUj7"}
-{"lat":36.3519279,"lon":-94.20259589999999,"superhero":"Droopy Dog","timestamp":1579607300170,"_id":"lNxgsey8cLfUDrOO"}
-{"lat":36.3519279,"lon":-94.20259589999999,"superhero":"White Cupcake","timestamp":1579608069609,"_id":"mR42XS7DIVmek53S"}
-{"lat":36.3519279,"lon":-94.20259589999999,"superhero":"Droppy Dog","timestamp":1579607524101,"_id":"n8a2xGdA8JpXJTXl"}
-{"lat":36.3519279,"lon":-94.20259589999999,"superhero":"Droppy Dog","timestamp":1579607524567,"_id":"olAANjPAC81snlj3"}
-{"lat":36.3519279,"lon":-94.20259589999999,"superhero":"Droopy Dog","timestamp":1579607300742,"_id":"rnnBF4vWTCcP97qC"}
-{"lat":36.3519279,"lon":-94.20259589999999,"superhero":"Droppy Dog","timestamp":1579607519650,"_id":"vHTseGVTOuxqqBcX"}
-{"timestamp":1579810717631,"_id":"B2mIxXidPcYDVgLc"}
-{"lat":36.3632134,"lon":-94.1812834,"timestamp":1579810780470,"_id":"hqT67E3aSPYQaNzO"}
+{"lat":52.520007,"lon":13.404954,"weather":{"time":1580439966,"summary":"Possible Drizzle and Windy","icon":"rain","precipIntensity":0.0102,"precipProbability":0.47,"precipType":"rain","temperature":49.27,"apparentTemperature":43.5,"dewPoint":47.28,"humidity":0.93,"pressure":997.3,"windSpeed":15.89,"windGust":40.23,"windBearing":248,"cloudCover":0.98,"uvIndex":0,"visibility":10,"ozone":295.5},"air":{"parameter":"pm10","value":10.01,"lastUpdated":"2017-01-06T09:00:00.000Z","unit":"µg/m³","sourceName":"EEA Germany","averagingPeriod":{"value":1,"unit":"hours"}},"timestamp":1580439966958,"_id":"PJzHYUrKTfRmDvEO"}

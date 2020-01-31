@@ -13,7 +13,7 @@ async function getData() {
         geo.textContent = `Latitude: ${item.lat}, Longitude: ${item.lon}`;
         date.textContent = dateString;
 
-        root.append(superhero, geo, date);
+        root.append(geo, date);
         document.body.append(root);
     }
     console.log(data);
