@@ -11,7 +11,7 @@ if ('geolocation' in navigator) {
             const api_url = `/weather/${lat},${lon}`;
             const response = await fetch(api_url);
             const json = await response.json();
-            const weather =json.weather.currently;
+            const weather = json.weather.currently;
             const air = json.air_quality.results[0].measurements[0];
             document.getElementById('summary').textContent = weather.summary;
             document.getElementById('temperature').textContent = weather.temperature;

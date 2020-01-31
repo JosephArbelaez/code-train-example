@@ -2,7 +2,9 @@ const express = require('express');
 const Datastore = require('nedb');
 const fetch = require('node-fetch');
 const app = express();
+require('dotenv').config();
 
+console.log(process.env);
 // Have the application listen to whichever port the hosting application sets or 3000.
 const port = process.env.PORT || 3000;
 
@@ -38,7 +40,8 @@ app.get('/weather/:latlon', async (request, response) => {
     const lat = latlon[0];
     const lon = latlon[1];
     console.log(lat, lon);
-    const weather_url = `https://api.darksky.net/forecast/f6488d0155f079fdec77fa68b40fca88/${lat},${lon}`;
+    const api_key = process.env.API_KEY;
+    const weather_url = `https://api.darksky.net/forecast/${api_key}/${lat},${lon}`;
     const weather_response = await fetch(weather_url);
     const weather_data = await weather_response.json();
 
