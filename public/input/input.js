@@ -10,8 +10,11 @@ if ('geolocation' in navigator) {
                 document.getElementById('latitude').textContent = lat.toFixed(2);
                 document.getElementById('longitude').textContent = lon.toFixed(2);
                 const api_url = `/weather/${lat},${lon}`;
+                console.log(api_url);
                 const response = await fetch(api_url);
+                console.log(response);
                 const json = await response.json();
+                console.log(json);
                 weather = json.weather.currently;
                 air = json.air_quality.results[0].measurements[0];
                 console.log(weather, air);
