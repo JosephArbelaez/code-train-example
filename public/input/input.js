@@ -20,23 +20,22 @@ if ('geolocation' in navigator) {
                 document.getElementById('aq_value').textContent = air.value;
                 document.getElementById('aq_units').textContent = air.unit;
                 document.getElementById('aq_date').textContent = air.lastUpdated;
+
+                const data = { lat, lon, weather, air };
+                const options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                };
+                const db_response = await fetch('/api', options);
+                const db_json = await db_response.json();
+                console.log(db_json);
             } catch (error) {
                 console.log (error);
-                air = { value: -1 };
                 document.getElementById('aq_value').textContent = "No Reading Available.";
             }
-
-            const data = { lat, lon, weather, air };
-            const options = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            };
-            const db_response = await fetch('/api', options);
-            const db_json = await db_response.json();
-            console.log(db_json);
         }); 
     }   else {
             console.log('geolocation not available');
